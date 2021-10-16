@@ -120,6 +120,15 @@ strong {
   outline-color: hsl(var(--hue), 95%, 50%);
 }
 
+.overlay__btn--transparento {
+  background: transparent;
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  border-width: 2px;
+  margin-right: 0.75rem;
+  margin-bottom: 5rem;
+}
+
 .overlay__btn:hover {
   transform: scale(1.05);
   cursor: pointer;
