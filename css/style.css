@@ -1,0 +1,211 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-Violet: hsl(257, 40%, 49%);
+  --color-softMagenta: hsl(300, 69%, 71%);
+  --color-shadow-100: rgba(0, 0, 0, 0.120);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--color-Violet);
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.primary-btn, 
+a.primary-btn {
+  width: min(100%, 16.875rem); /* 100% 270px */
+  background-color:var(--color-white);
+  box-shadow: 0 10px 10px var(--color-shadow-100);
+  color: var(--color-Violet);
+  padding: 10px 0;
+  border-radius: 3.125rem; /* 50px */
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+
+.primary-btn:hover , 
+a.primary-btn:hover {
+  background-color: var(--color-softMagenta);
+  color: var(--color-white);
+}
+
+@media (min-width: 64rem) { /* 1024px */
+  .primary-btn, a.primary-btn {
+    width: 12.5rem; /* 200px */
+  }
+}
+
+.padding-all {
+  padding: 1rem 2rem; /* 16px 32px */
+}
+
+.padding-y {
+  padding-top: 1rem; /* 16px */
+  padding-bottom: 1rem; /* 16px */
+}
+
+.padding-x {
+  padding-left: 2rem; /* 32px */
+  padding-right: 2rem; /* 32px */
+}
+
+.container {
+  max-width: 84.375rem; /* 1350px */
+  margin: auto;
+}
+/* End General Styles */
+
+.landing__page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('https://f.top4top.io/p_1984pghk01.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 120%;
+}
+
+.landing__page::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://g.top4top.io/p_19848l2r12.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80rem; /* 	1280px */
+  display: none;
+  z-index: -1;
+}
+
+@media (min-width: 64rem) { /* 1024px */
+  .landing__page {
+    background-image: none;
+  }
+
+  .landing__page::before {
+    display: block;
+  }
+}
+
+.landing__header {
+  height: 6.25rem; /* 100px */
+  display: flex;
+  align-items: center;
+}
+
+.landing__header img {
+  width: 10rem; /* 160px */
+}
+
+.landing__hero {
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+
+@media (min-width: 64rem) { /* 1024px */
+  .landing__hero {
+    height: calc(85vh - 6.25rem); /* 6.25rem is 100px */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+.hero__image {
+  width: 100%;
+  height: 17rem; /* 272px */
+  background-image: url('https://i.ibb.co/hs3Vjbk/Proyek-Baru-322-E9-F21-AE.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: clamp(10%, 100%, 24.375rem); /* 24.37rem is 390px */
+}
+
+@media (min-width: 64rem) { /* 1024px */
+  .hero__image {
+    width: 167%;
+    height: 40rem; /* 640px */
+    background-size: 100%;
+    margin-right: 3.125rem; /* 50px */
+  }
+}
+
+.hero__text {
+  color: var(--color-white);
+  text-align: center;
+  line-height: 1.7;
+}
+
+@media (min-width: 64rem) { /* 1024px */
+  .hero__text {
+    text-align: left;
+  }
+}
+
+.hero__text h1 {
+  font-size: 1.5625rem; /* 25px */
+  margin-bottom: 0;
+}
+
+@media (min-width: 64rem) { /* 1024px */
+  .hero__text h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+}
+
+.hero__text p {
+  font-size: 1.02rem;
+}
+
+.hero__icons {
+  padding: 1rem 1.25rem 0; /* 16px 20px 0 20px */
+  list-style-type: none;
+  text-align: center;
+}
+
+@media (min-width: 64rem) { /* 1024px */
+  .hero__icons {
+    text-align: right;
+  }
+}
+
+.hero__icons li {
+  display: inline-block;
+}
+
+.hero__icons li a {
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+  line-height: 40px;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  font-size: 1.375rem; /* 22px */
+  text-align: center;
+  transition: all 300ms ease-in-out;
+}
+
+.hero__icons li:not(:last-child) a {
+  margin-right: 10px;
+}
+
+.hero__icons li a:hover {
+  color: var(--color-softMagenta);
+  border-color: var(--color-softMagenta);
+}
