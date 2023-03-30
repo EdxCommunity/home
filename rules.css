@@ -1,0 +1,108 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:400,700");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.recruitment-timeline {
+  position: relative;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 50px auto;
+}
+.recruitment-timeline__item {
+  cursor: pointer;
+  transision: all 0.5s ease-in;
+  border-left: 6px solid #1b3560;
+  padding-bottom: 42px;
+  margin-left: 48px;
+  position: relative;
+  padding-left: 37px;
+  width: 100%;
+}
+.recruitment-timeline__item::before {
+  content: "";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 14px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  left: -16px;
+  top: 0;
+  line-height: 26px;
+  text-align: center;
+  color: #fff;
+  background: #1b3560;
+}
+.recruitment-timeline__item:last-of-type {
+  border-left: 6px solid transparent;
+}
+.recruitment-timeline__item__number {
+  position: absolute;
+  top: 0;
+  left: -48px;
+}
+.recruitment-timeline__item__title, .recruitment-timeline__item__number {
+  font-weight: 700;
+  font-size: 24px;
+  color: #1b3560;
+  margin: 0;
+}
+.recruitment-timeline__item__text {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s ease-in;
+}
+@media (max-width: 1100px) {
+  .recruitment-timeline__item__text {
+    overflow-y: scroll;
+  }
+}
+.recruitment-timeline__item__text p {
+  margin-top: 18px;
+  margin-bottom: 9px;
+}
+.recruitment-timeline__item__text a {
+  color: #17c5cb;
+  text-transform: uppercase;
+  position: relative;
+  font-size: 14px;
+  text-decoration: none;
+}
+.recruitment-timeline__item__text a::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 10px;
+  position: relative;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.recruitment-timeline__item__text a:hover::after {
+  opacity: 1;
+  left: 10px;
+}
+.recruitment-timeline__item__active {
+  border-left: 6px solid #17c5cb;
+  cursor: initial;
+}
+.recruitment-timeline__item__active::before {
+  content: "";
+  background-color: #17c5cb;
+}
+.recruitment-timeline__item__active .recruitment-timeline__item__title,
+.recruitment-timeline__item__active .recruitment-timeline__item__number {
+  color: #17c5cb;
+}
+.recruitment-timeline__item__active .recruitment-timeline__item__text {
+  max-height: 128px;
+}
